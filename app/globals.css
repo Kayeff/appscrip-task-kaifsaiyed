@@ -3,13 +3,6 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
   max-width: 100vw;
@@ -19,7 +12,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,8 +27,54 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.svgButtons {
+  height: 20px;
+  width: 20px;
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: var(--background);
+}
+
+.container {
+  width: 100%;
+  max-width: 91.46%;
+  margin: 0px auto;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (width >= 1440px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+@media (width >= 768px) {
+  .svgButtons {
+    height: 24px;
+    width: 24px;
   }
 }
