@@ -1,0 +1,39 @@
+.filterbuttons {
+  --border: #f1f1f1;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.filterbuttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: clamp(12px, 2em, 18px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.totalitems {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommended {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+}
