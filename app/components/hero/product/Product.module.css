@@ -131,6 +131,7 @@
     display: grid;
     grid-template-columns: 29.5% 70%;
   }
+
   .productGrid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -141,5 +142,9 @@
 
   .productcontainer {
     padding: 32px 0px;
+  }
+
+  .prodImage {
+    height: 300px;
   }
 }

@@ -1,11 +1,13 @@
-import axios from "axios";
 import ProductGrid from "./ProductGrid";
 import { DataObj } from "@/types/types";
 
+export const revalidate = 0;
+
 export default async function ProductList() {
-  const { data } = await axios.get<DataObj[]>(
-    "https://fakestoreapi.com/products"
-  );
+  const response = await fetch("https://fakestoreapi.com/products", {
+    cache: "no-store",
+  });
+  const data: DataObj[] = await response.json();
 
   return <ProductGrid data={data} />;
 }

@@ -18,9 +18,7 @@ export default function Hero() {
         <div className={styles.display}>
           <h1>DISCOVER OUR PRODUCTS</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus
-            scelerisque. Dolor integer scelerisque nibh amet mi ut elementum
-            dolor.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea velit reiciendis quasi. Hic, at suscipit. Est assumenda blanditiis fugiat illo, pariatur maxime debitis ut quis vero, ea cumque dolor doloremque distinctio dolorem facere amet dolores provident magnam. Obcaecati, aperiam asperiores!
           </p>
         </div>
       </Container>
