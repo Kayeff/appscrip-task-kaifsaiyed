@@ -1,7 +1,7 @@
 export const recommendedData = [
   { title: "Recommended", value: "recommended" },
-  { title: "Ratings", value: "recommended" },
-  { title: "Count", value: "count" },
+  { title: "Ratings", value: "ratings" },
+  { title: "Liked", value: "liked" },
   { title: "Price: High to Low", value: "high-to-low" },
   { title: "Price: Low to High", value: "low-to-high" },
 ];

@@ -5,10 +5,11 @@
   align-items: end;
   justify-content: center;
   position: absolute;
+  z-index: 10;
   right: 0;
   bottom: -160px;
   background: white;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.235);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -22,6 +23,18 @@
   align-items: center;
   justify-content: end;
   gap: 4px;
+}
+
+.optionSelected {
+  padding: 5px;
+  text-align: end;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 4px;
+  width: 100%;
+  background-color: whitesmoke;
 }
 
 .option:hover {

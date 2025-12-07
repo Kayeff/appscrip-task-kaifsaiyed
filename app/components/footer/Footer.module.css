@@ -59,12 +59,7 @@
   text-align: center;
 }
 
-.line {
-  width: 100%;
-  height: 1px;
-  background: var(--background);
-}
-
+.line,
 .mobileline {
   width: 100%;
   height: 1px;
