@@ -1,5 +1,3 @@
-import styles from "./Footer.module.css";
-
-export default function Bottomline() {
-  return <div className={styles.line} />;
+export default function Bottomline({ style }: { style: string }) {
+  return <div className={style} />;
 }

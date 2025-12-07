@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./Product.module.css";
-import { DataObj } from "@/types/types";
+import { ProductT } from "@/types/types";
 
-export default function Product({ prod }: { prod: DataObj }) {
+export default function Product({ prod }: ProductT) {
   return (
     <li>
       <Image
@@ -20,6 +20,7 @@ export default function Product({ prod }: { prod: DataObj }) {
           <Image height={24} width={24} src="/svg/heart.svg" alt="heart" />
         </div>
         <p>{prod.category}</p>
+        <p>{prod.rating.count}</p>
       </div>
     </li>
   );

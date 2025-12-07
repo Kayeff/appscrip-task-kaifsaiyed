@@ -1,6 +1,6 @@
 import Container from "../Container";
 import styles from "./Hero.module.css";
-import ProductList from "./ProductList";
+import ProductList from "./product/ProductList";
 
 export default function Hero() {
   return (

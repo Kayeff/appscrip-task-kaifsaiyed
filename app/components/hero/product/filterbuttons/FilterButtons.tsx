@@ -4,20 +4,14 @@ import styles from "./Filterbuttons.module.css";
 import { useState } from "react";
 import RecommendedBox from "./RecommendedBox";
 
-export default function FilterButtons({ totalItems }: { totalItems: number }) {
+export default function FilterButtons({}: {}) {
   const [toggleFilter, setToggleFilter] = useState(false);
-  const [toggleRecommended, setToggleRecommended] = useState(false);
-  const [option, setOption] = useState("recommended");
-
-  function handleOptionClick(opt: string) {
-    setOption(opt);
-    setToggleRecommended(false);
-  }
+  const [toggleRecommendedBox, setToggleRecommendedBox] = useState(false);
 
   return (
     <div className={styles.filterbuttons}>
       <div className={styles.filter}>
-        <p className={styles.totalitems}>{totalItems} items</p>
+        <p className={styles.totalitems}>{} items</p>
         <div>
           <button onClick={() => setToggleFilter((prev) => !prev)}>
             {`${toggleFilter ? "Hide" : "Show"} Filter`}
@@ -25,8 +19,8 @@ export default function FilterButtons({ totalItems }: { totalItems: number }) {
         </div>
       </div>
       <div className={styles.recommended}>
-        <button onClick={() => setToggleRecommended((prev) => !prev)}>
-          <p>{option}</p>
+        <button onClick={() => setToggleRecommendedBox((prev) => !prev)}>
+          <p>{}</p>
           <Image
             height={10}
             width={10}
@@ -34,10 +28,10 @@ export default function FilterButtons({ totalItems }: { totalItems: number }) {
             alt="arrow-down"
           />
         </button>
-        {toggleRecommended && (
+        {toggleRecommendedBox && (
           <RecommendedBox
-            option={option}
-            handleOptionClick={handleOptionClick}
+            // option={option}
+            // handleOptionClick={handleOptionClick}
           />
         )}
       </div>

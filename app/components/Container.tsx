@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
+import { ContainerT } from "@/types/types";
 
-export default function Container({
-  className,
-  children,
-}: {
-  className?: string;
-  children: ReactNode;
-}) {
+export default function Container({ className, children }: ContainerT) {
   return <div className={`container ${className}`}>{children}</div>;
 }

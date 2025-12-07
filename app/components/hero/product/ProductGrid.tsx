@@ -1,18 +1,18 @@
 "use client";
 import styles from "./Product.module.css";
 import Container from "../../Container";
-import FilterButtons from "../filterbuttons/FilterButtons";
+import FilterButtons from "./filterbuttons/FilterButtons";
 import Product from "./Product";
-import { useState } from "react";
-import { DataObj } from "@/types/types";
+import { ProductGridT } from "@/types/types";
 
-export default function ProductGrid({ data }: { data: DataObj[] }) {
-  const [filteredData, setFilteredData] = useState<DataObj[]>(data);
-  const totalItems = data.length;
-
+export default function ProductGrid({ data }: ProductGridT) {
   return (
     <Container className={styles.productcontainer}>
-      <FilterButtons totalItems={totalItems} />
+      <FilterButtons
+      // option={option}
+      // totalItems={totalItems}
+      // onClick={handleOptionClick}
+      />
       <ul className={styles.productlist}>
         {data.map((prod) => (
           <Product key={prod.id} prod={prod} />

@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type DataObj = {
   id: number;
   title: string;
@@ -10,3 +12,11 @@ export type DataObj = {
     count: number;
   };
 };
+
+export type ContainerT = {
+  className?: string;
+  children: ReactNode;
+};
+
+export type ProductGridT = { data: DataObj[] };
+export type ProductT = { prod: DataObj };
