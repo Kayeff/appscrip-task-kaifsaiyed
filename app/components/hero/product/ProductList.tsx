@@ -3,6 +3,7 @@ import ProductGrid from "./ProductGrid";
 import { DataObj } from "@/types/types";
 
 export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 export default async function ProductList() {
   const response = await fetch("https://fakestoreapi.com/products", {
