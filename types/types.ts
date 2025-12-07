@@ -18,5 +18,5 @@ export type ContainerT = {
   children: ReactNode;
 };
 
-export type ProductGridT = { data: DataObj[] };
+export type ProductGridT = { data: DataObj[]; isLoading: boolean; error: any };
 export type ProductT = { prod: DataObj };

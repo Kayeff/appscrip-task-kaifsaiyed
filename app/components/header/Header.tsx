@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "../common/Container";
 import BlackTopbar from "./BlackTopbar";
 import styles from "./Header.module.css";
@@ -10,14 +11,18 @@ export default function Header() {
         <div className={styles.headerContainer}>
           <div className={styles.left}>
             <a href="#">
-              <img
+              <Image
+                height={24}
+                width={24}
                 alt="hamburger-menu"
                 className={`svgButtons ${styles.hamburgerMenu}`}
                 src="/svg/solar_hamburger-menu-linear.svg"
               />
             </a>
             <button>
-              <img
+              <Image
+                height={24}
+                width={24}
                 className="svgButtons"
                 id="logo"
                 src="/svg/Logo.svg"
@@ -32,24 +37,36 @@ export default function Header() {
           {/* <!-- right --> */}
           <div className={styles.right}>
             <button>
-              <img
+              <Image
+                height={24}
+                width={24}
                 className="svgButtons"
                 src="/svg/search-normal.svg"
                 alt="search"
               />
             </button>
             <button>
-              <img className="svgButtons" src="/svg/heart.svg" alt="heart" />
+              <Image
+                height={24}
+                width={24}
+                className="svgButtons"
+                src="/svg/heart.svg"
+                alt="heart"
+              />
             </button>
             <button>
-              <img
+              <Image
+                height={24}
+                width={24}
                 className="svgButtons"
                 src="/svg/shopping-bag.svg"
                 alt="shopping-bag"
               />
             </button>
             <button className={styles.hide}>
-              <img
+              <Image
+                height={24}
+                width={24}
                 className="svgButtons"
                 src="/svg/profile.svg"
                 alt="profile"
@@ -57,7 +74,12 @@ export default function Header() {
             </button>
             <button className={styles.hide}>
               <p className={styles.lang}>ENG</p>
-              <img src="/svg/arrow-left.svg" alt="lang-dropdown" />
+              <Image
+                height={24}
+                width={24}
+                src="/svg/arrow-left.svg"
+                alt="lang-dropdown"
+              />
             </button>
           </div>
         </div>

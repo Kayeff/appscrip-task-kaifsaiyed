@@ -8,10 +8,14 @@ import FilterBox from "./filterbuttons/filterbox/FilterBox";
 import { useSelector } from "react-redux";
 import { selectSideFilter } from "@/store/selectors/toggle-selector";
 import { selectedFilteredData } from "@/store/selectors/product-selector";
+import ErrorComponent from "../../common/Error";
 
-export default function ProductGrid({ data }: ProductGridT) {
+export default function ProductGrid({ data, isLoading, error }: ProductGridT) {
   const showSideFilter = useSelector(selectSideFilter);
   const filteredProducts = useSelector(selectedFilteredData);
+
+  if (isLoading) return <Container>Fetching data...</Container>;
+  if (error) return <ErrorComponent err={error} />;
 
   return (
     <Container className={styles.productcontainer}>

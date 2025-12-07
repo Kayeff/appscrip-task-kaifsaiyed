@@ -30,7 +30,7 @@ export default function Product({ prod }: ProductT) {
           height={200}
           width={300}
           src={`${prod.image}`}
-          alt={`${prod.title}-image`}
+          alt={`${prod.title}`}
           className={styles.prodImage}
           loading="lazy"
         />
@@ -43,9 +43,14 @@ export default function Product({ prod }: ProductT) {
           <h3 className={styles.prodtitle}>{prod.title}</h3>
           <button onClick={handleClick}>
             {isSelected ? (
-              <Image height={24} width={24} src="/svg/liked.svg" alt="heart" />
+              <Image
+                height={24}
+                width={24}
+                src="/svg/liked.svg"
+                alt="heart-like"
+              />
             ) : (
-              <Image height={24} width={24} src="/svg/heart.svg" alt="heart" />
+              <Image height={24} width={24} src="/svg/heart.svg" alt="like" />
             )}
           </button>
         </div>
