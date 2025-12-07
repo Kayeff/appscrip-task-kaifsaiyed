@@ -1,6 +1,5 @@
 "use client";
 import axios from "axios";
-import ErrorComponent from "../../common/Error";
 import ProductGrid from "./ProductGrid";
 import { DataObj } from "@/types/types";
 import { useEffect, useState } from "react";

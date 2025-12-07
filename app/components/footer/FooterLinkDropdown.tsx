@@ -1,6 +1,7 @@
 "use client";
 import { ReactNode, useState } from "react";
 import styles from "./Footer.module.css";
+import Image from "next/image";
 
 export default function FooterLinkDropdown({
   titleStyles,
@@ -18,7 +19,12 @@ export default function FooterLinkDropdown({
       <div className={styles.dropdown}>
         <h3 className={styles.title}>{title}</h3>
         <button onClick={() => setToggleDropdwn((prev) => !prev)}>
-          <img src="/svg/arrow-right.svg" alt="down-arrow" />
+          <Image
+            height={24}
+            width={24}
+            src="/svg/arrow-right.svg"
+            alt="down-arrow"
+          />
         </button>
       </div>
       {toggleDropdwn && <div>{children}</div>}
