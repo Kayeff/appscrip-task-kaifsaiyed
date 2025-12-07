@@ -2,38 +2,24 @@
 import { DataObj } from "@/types/types";
 import styles from "./FilterBox.module.css";
 import FilterDropdown from "./FilterDropdown";
-import Bottomline from "@/app/components/footer/Bottomline";
+import Bottomline from "@/app/components/common/Bottomline";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  productRecommended,
   productSideFilter,
   selectedFilteredData,
 } from "@/store/selectors/product-selector";
-import { filterSideBox, populateData } from "@/store/slices/product-slice";
-import { useEffect } from "react";
+import { applyFilters, filterSideBox } from "@/store/slices/product-slice";
 
 export default function FilterBox({ data }: { data: DataObj[] }) {
+  const dispatch = useDispatch();
   const categories = ["all", ...new Set(data.map((item) => item.category))];
   const sideFilter = useSelector(productSideFilter);
-  const dispatch = useDispatch();
   const filteredProducts = useSelector(selectedFilteredData);
-  const recommended = useSelector(productRecommended);
 
-  useEffect(() => {
-    const filteredData = data.filter((prod) => {
-      const matchesCategory =
-        sideFilter.category === "all" || prod.category === sideFilter.category;
-
-      const matchesRating =
-        sideFilter.rating === "all" ||
-        (Number(sideFilter.rating) - 1 < prod.rating.rate &&
-          prod.rating.rate <= Number(sideFilter.rating));
-
-      return matchesCategory && matchesRating;
-    });
-
-    dispatch(populateData(filteredData));
-  }, [sideFilter.category, sideFilter.rating, recommended]);
+  function handleChange(type: "rating" | "category", value: string) {
+    dispatch(filterSideBox({ type, value }));
+    dispatch(applyFilters());
+  }
 
   return (
     <div className={styles.box}>
@@ -53,11 +39,7 @@ export default function FilterBox({ data }: { data: DataObj[] }) {
                       category.toLowerCase() ===
                       sideFilter.category.toLowerCase()
                     }
-                    onChange={() =>
-                      dispatch(
-                        filterSideBox({ type: "category", value: category })
-                      )
-                    }
+                    onChange={() => handleChange("category", category)}
                   />
                   <p>{category}</p>
                 </label>
@@ -74,9 +56,7 @@ export default function FilterBox({ data }: { data: DataObj[] }) {
                   type="radio"
                   name="ratings"
                   checked={"all" === sideFilter.rating.toLowerCase()}
-                  onChange={() =>
-                    dispatch(filterSideBox({ type: "rating", value: "all" }))
-                  }
+                  onChange={() => handleChange("rating", "all")}
                 />
                 <p>All</p>
               </label>
@@ -88,14 +68,7 @@ export default function FilterBox({ data }: { data: DataObj[] }) {
                     type="radio"
                     name="ratings"
                     checked={String(5 - indx) === sideFilter.rating}
-                    onChange={() =>
-                      dispatch(
-                        filterSideBox({
-                          type: "rating",
-                          value: String(5 - indx),
-                        })
-                      )
-                    }
+                    onChange={() => handleChange("rating", String(5 - indx))}
                   />
                   <p>Below {5 - indx}</p>
                 </label>

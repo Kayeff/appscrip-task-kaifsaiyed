@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import Bottomline from "./Bottomline";
+import Bottomline from "../common/Bottomline";
 
 export default function FooterrightTop() {
   return (

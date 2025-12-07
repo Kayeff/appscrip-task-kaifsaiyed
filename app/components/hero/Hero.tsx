@@ -1,4 +1,4 @@
-import Container from "../Container";
+import Container from "../common/Container";
 import styles from "./Hero.module.css";
 import ProductList from "./product/ProductList";
 

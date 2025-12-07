@@ -3,19 +3,24 @@ import Image from "next/image";
 import styles from "./Product.module.css";
 import { ProductT } from "@/types/types";
 import { useDispatch, useSelector } from "react-redux";
+import { selectedLikedProducts } from "@/store/selectors/product-selector";
 import {
+  applyFilters,
   likeProduct,
   unlikeProduct,
-} from "@/store/slices/liked_products-slice";
-import { selectedLikedProducts } from "@/store/selectors/liked-product-selector";
+} from "@/store/slices/product-slice";
 
 export default function Product({ prod }: ProductT) {
   const dispatch = useDispatch();
   const likedProducts = useSelector(selectedLikedProducts);
-  const isLiked = likedProducts.find((id) => id === prod.id);
+  const isSelected = likedProducts.includes(prod.id);
 
-  function toggleLike() {
-    isLiked ? dispatch(unlikeProduct(prod.id)) : dispatch(likeProduct(prod.id));
+  function handleClick() {
+    isSelected
+      ? dispatch(unlikeProduct(prod.id))
+      : dispatch(likeProduct(prod.id));
+
+    dispatch(applyFilters());
   }
 
   return (
@@ -36,8 +41,8 @@ export default function Product({ prod }: ProductT) {
       <div className={styles.description}>
         <div>
           <h3 className={styles.prodtitle}>{prod.title}</h3>
-          <button onClick={toggleLike}>
-            {isLiked ? (
+          <button onClick={handleClick}>
+            {isSelected ? (
               <Image height={24} width={24} src="/svg/liked.svg" alt="heart" />
             ) : (
               <Image height={24} width={24} src="/svg/heart.svg" alt="heart" />

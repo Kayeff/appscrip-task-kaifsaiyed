@@ -1,5 +1,5 @@
-import Container from "../Container";
-import Bottomline from "./Bottomline";
+import Container from "../common/Container";
+import Bottomline from "../common/Bottomline";
 import styles from "./Footer.module.css";
 import Footerrow from "./Footerrow";
 import FooterleftTop from "./FooterleftTop";

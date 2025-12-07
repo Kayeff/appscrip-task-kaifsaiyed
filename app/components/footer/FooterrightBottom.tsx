@@ -1,7 +1,7 @@
 import { metamuseaccepts } from "@/static/data";
 import styles from "./Footer.module.css";
 import FooterLinkDropdown from "./FooterLinkDropdown";
-import Bottomline from "./Bottomline";
+import Bottomline from "../common/Bottomline";
 
 export default function FooterrightBottom() {
   return (

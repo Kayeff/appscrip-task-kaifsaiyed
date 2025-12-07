@@ -17,3 +17,8 @@ export const selectedFilteredData = createSelector(
   [productState],
   (product) => product.filteredData
 );
+
+export const selectedLikedProducts = createSelector(
+  [productState],
+  (product) => product.likedData
+);

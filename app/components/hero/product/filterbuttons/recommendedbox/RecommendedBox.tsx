@@ -3,7 +3,7 @@ import styles from "./RecommendedBox.module.css";
 import { recommendedData } from "@/static/data";
 import { useDispatch, useSelector } from "react-redux";
 import { productRecommended } from "@/store/selectors/product-selector";
-import { filterRecommended } from "@/store/slices/product-slice";
+import { applyFilters, filterRecommended } from "@/store/slices/product-slice";
 import { closeRecommended } from "@/store/slices/toggle-slice";
 
 export default function RecommendedBox() {
@@ -12,6 +12,7 @@ export default function RecommendedBox() {
 
   function selectRecommendedValue(option: string) {
     disptach(filterRecommended(option));
+    disptach(applyFilters());
     disptach(closeRecommended());
   }
 

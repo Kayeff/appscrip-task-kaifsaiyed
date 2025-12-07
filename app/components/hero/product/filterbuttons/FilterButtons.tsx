@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./Filterbuttons.module.css";
-import RecommendedBox from "./RecommendedBox";
+import RecommendedBox from "./recommendedbox/RecommendedBox";
 import { useDispatch, useSelector } from "react-redux";
 import { productRecommended } from "@/store/selectors/product-selector";
 import { populateData } from "@/store/slices/product-slice";

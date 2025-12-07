@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import styles from "./Footer.module.css";
-import Bottomline from "./Bottomline";
+import Bottomline from "../common/Bottomline";
 
 type FooterRowT = {
   Left: ReactNode;

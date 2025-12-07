@@ -1,4 +1,4 @@
-import Bottomline from "./Bottomline";
+import Bottomline from "../common/Bottomline";
 import styles from "./Footer.module.css";
 import { metamuselink, quicklinks } from "@/static/data";
 import FooterLinkDropdown from "./FooterLinkDropdown";
