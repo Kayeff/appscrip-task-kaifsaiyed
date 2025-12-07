@@ -8,8 +8,8 @@ export default function FooterrightTop() {
       <div className={styles.footerheading}>
         <h3 className={styles.title}>call us</h3>
         <p>
-          <span>+44 221 133 5360</span>
-          <span>customercare@mettamuse.com</span>
+          <a href="#">+44 221 133 5360</a>
+          <a href="#">customercare@mettamuse.com</a>
         </p>
       </div>
 

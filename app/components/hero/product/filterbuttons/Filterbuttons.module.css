@@ -5,7 +5,7 @@
   border-bottom: 1px solid var(--border);
   padding: 24px 0px;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 50% 50%;
 }
 
 .filterbuttons button {
@@ -13,27 +13,54 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  font-size: clamp(12px, 2em, 18px);
+}
+
+.filterbuttons button p {
+  font-size: clamp(14px, 3vw, 20px);
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .totalitems {
+  font-size: clamp(14px, 3vw, 20px);
   font-weight: 700;
   text-transform: uppercase;
+  display: none;
 }
 
 .filter {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .recommended {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   position: relative;
+}
+
+@media (width >= 1024px) {
+  .totalitems {
+    display: block;
+  }
+  .filterbuttons {
+    grid-template-columns: 30% 70%;
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .recommended {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+  }
 }

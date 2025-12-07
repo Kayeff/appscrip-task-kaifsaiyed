@@ -23,7 +23,7 @@ export default function ProductGrid({ data }: ProductGridT) {
         }`}
       >
         {showSideFilter && <FilterBox data={data} />}
-        <ul className={styles.productlist}>
+        <ul className={styles.productGrid}>
           {filteredProducts.map((prod) => (
             <Product key={prod.id} prod={prod} />
           ))}

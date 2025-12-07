@@ -11,8 +11,10 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container className={styles.footercontainer}>
+        {/* Top Row */}
         <Footerrow Left={<FooterleftTop />} Right={<FooterrightTop />} />
         <Bottomline style={styles.line} />
+        {/* Bottom Row */}
         <Footerrow Left={<FooterleftBottom />} Right={<FooterrightBottom />} />
 
         <div className={styles.copyright}>

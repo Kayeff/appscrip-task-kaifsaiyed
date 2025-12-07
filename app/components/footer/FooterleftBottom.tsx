@@ -12,7 +12,9 @@ export default function FooterleftBottom() {
       >
         <ul>
           {metamuselink.links.map((link) => (
-            <li key={link.id}>{link.title}</li>
+            <li key={link.id}>
+              <a href="#">{link.title}</a>
+            </li>
           ))}
         </ul>
       </FooterLinkDropdown>
@@ -25,7 +27,9 @@ export default function FooterleftBottom() {
       >
         <ul>
           {quicklinks.links.map((link) => (
-            <li key={link.id}>{link.title}</li>
+            <li key={link.id}>
+              <a href="#">{link.title}</a>
+            </li>
           ))}
         </ul>
       </FooterLinkDropdown>

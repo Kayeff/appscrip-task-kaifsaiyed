@@ -48,7 +48,7 @@ export default function FilterButtons({ data }: { data: DataObj[] }) {
         <p className={styles.totalitems}>{data.length} items</p>
         <div>
           <button onClick={handleSideFilter}>
-            {`${showSideFilter ? "Hide" : "Show"} Filter`}
+           <p> {`${showSideFilter ? "Hide" : "Show"} Filter`}</p>
           </button>
         </div>
       </div>
