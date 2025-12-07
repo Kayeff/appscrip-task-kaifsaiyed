@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Appscrip task - Kaif Saiyed
 
-## Getting Started
+Link: https://appscrip-task-kaifsaiyed.vercel.app/
 
-First, run the development server:
+### A functional Next.js e-commerce app with just HTML & CSS which is both functional and responsive.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project was a task given by Appscrip with a figma file and some functional and responsive requirements. The page is hosted on Vercel as is created with Next.js which comes out of the box optimizations for Next.js. Every part of this project shows how to do the following:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Create a Next.js project with create-next-app@latest
+- State Management using Redux JS (Redux Toolkit).
+- Styling using CSS Modules.
+- Minimum use of pre-built packages.
+- Manage versions using Git and Github
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Issues faced
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- I have less frequently used Next.js with CSS Modules, mostly preferred Tailwind CSS.
+- When starting the task as mentioned in the mail, I started coding it on just Vanilla HTML & CSS. So it took some of my time.
+- Deployment error due to FakestoreAPI not validating the proxy of Next.js because I have called it on React Server Components which runs on server.
 
-## Learn More
+### Solved
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Implemeted by learning documentation.
+- Worked on it for more than 8 hours as to contemplate the time spent.
+- There were 2 scenarios
+  1. Switch to a Client Component and call the api from client.
+  2. Use another free dummy API other than FakestoreAPI that accepts the proxy.
+- I used the first option as there was no time for changing the data model of the previous api to new api. It is deployed on Vercel and works seamlessly.
